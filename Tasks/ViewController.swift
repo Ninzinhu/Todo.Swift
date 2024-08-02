@@ -6,5 +6,5 @@ class ViewController: UIViewController {
     super.viewDidLoad()
 
   }
-  // Faça qualquer configuração após carregar a visualização
+  // Faça qualquer configuração após carregar a visualização.
 }
