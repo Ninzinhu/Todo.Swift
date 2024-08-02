@@ -4,6 +4,8 @@ class ViewController: UIViewController {
 
 @IBOoutlet var tableView: UITableView!
 
+var tasks = [String]()
+
 
   override func viewDidLoad(){
     super.viewDidLoad()
@@ -15,7 +17,7 @@ class ViewController: UIViewController {
 extension ViewController: UITableViewDelegate {
 
 
-  func tableView( tableView: UITableView, didSelectRowAt indexPath: IndexPath){
+  func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath){
     tableView.didSelectRow(at: indexPath, animated: true)
   }
 
@@ -25,6 +27,16 @@ extension ViewController: UITableViewDelegate {
 }
 
 extension ViewController: UITableViewDataSource {
+
+  func tableView(_ tableView: UITableView, numbersOfRowsInSection section: Int) -> Int{
+    return tasks.count
+  }
+
+  func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell{
+    
+  }
+
+
 
   
 }
